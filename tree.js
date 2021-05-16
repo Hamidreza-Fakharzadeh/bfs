@@ -25,24 +25,23 @@ b.right = e;
 c.right = f;
 
 const bfs = (root) => {
-      const queue = [ root ];
-      const values = [];
-      console.log()
-      console.log()
+	const queue = [ root ];
+	let arr = [];
 
 	while (queue.length > 0) {
-            const curr = queue.shift();
-
+		const curr = queue.shift();
+		arr.push(curr.val);
 
 		if (curr.left !== null) {
 			queue.push(curr.left);
-
 		}
 		if (curr.right !== null) {
 			queue.push(curr.right);
-
 		}
 	}
+
+	return arr;
 };
 
 bfs(a);
+console.log(bfs(a))
